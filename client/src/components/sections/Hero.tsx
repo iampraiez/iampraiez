@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
                 <Download size={16} />
                 <button>
                   <span>
-                    <a href="./resume.pdf" download="Praise_Olaoye_Resume">
+                    <a href="./Praise_Olaoye_Resume.pdf" download="Praise_Olaoye_Resume">
                       Download Resume
                     </a>
                   </span>
