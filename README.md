@@ -15,7 +15,7 @@ I'm **Praise Olaoye**, a backend-focused full stack developer with nearly 2 year
 ### 📌 Portfolio
 
 Check out the live version of this portfolio:  
-👉 [https://iampraiez.vercel.app](https://iampraiez.vercel.app)
+👉 [https://satoru707.vercel.app](https://satoru707.vercel.app) 
 
 ### 📫 Contact Me
 
