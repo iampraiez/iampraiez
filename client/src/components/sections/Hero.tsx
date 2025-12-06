@@ -89,7 +89,7 @@ const Hero: React.FC = () => {
               </div>
               <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-neo-dark-lighter rounded-full flex items-center justify-center border-2 border-neo-blue-bright shadow-neo-glow-blue">
                 <span className="text-neo-blue-bright font-mono text-sm">
-                  React
+                  Typescript
                 </span>
               </div>
             </div>

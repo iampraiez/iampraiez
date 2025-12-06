@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <motion.a
-              href="https://github.com/satoru707"
+              href="https://github.com/iampraiez"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ y: -5, color: "#00FF41" }}

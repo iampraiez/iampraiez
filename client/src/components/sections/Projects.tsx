@@ -36,7 +36,7 @@ const Projects: React.FC = () => {
             Check out more of my projects on GitHub
           </p>
           <a
-            href="https://github.com/satoru707"
+            href="https://github.com/iampraiez"
             target="_blank"
             rel="noopener noreferrer"
             className="neo-button"

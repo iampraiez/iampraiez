@@ -89,12 +89,12 @@ const Contact: React.FC = () => {
                 <div>
                   <p className="text-[var(--text-secondary)] text-sm">GitHub</p>
                   <a
-                    href="https://github.com/satoru707"
+                    href="https://github.com/iampraiez"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[var(--text-primary)] hover:text-neo-green"
                   >
-                    github.com/satoru707
+                    github.com/iampraiez
                   </a>
                 </div>
               </motion.div>

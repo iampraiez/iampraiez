@@ -6,6 +6,7 @@ const techStacks = [
   "Node.js",
   "Express",
   "Fastify",
+  "Nestjs",
   "TypeScript",
   "Nextjs",
   "React",
