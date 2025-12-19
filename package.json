@@ -30,7 +30,7 @@
     "tailwindcss": "^4",
     "typescript": "^5"
   },
-    "packageManager": "pnpm@8.15.5",
+"packageManager": "pnpm@10.14.0",
   "engines": {
     "node": "20.x"
   }
