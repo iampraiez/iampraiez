@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: var(--font-fira-code), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --color-neo-dark: #121212;
+  --color-neo-dark-lighter: #1E1E1E;
+  --color-neo-gray: #2D2D2D;
+  --color-neo-green: #00FF41;
+  --color-neo-green-dim: #00CC33;
+  --color-neo-blue: #0C4A6E;
+  --color-neo-blue-bright: #0EA5E9;
+  --shadow-neo-glow-green: 0 0 10px rgba(0, 255, 65, 0.5);
+  --shadow-neo-glow-blue: 0 0 10px rgba(14, 165, 233, 0.5);
+}
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* Light mode styles */
+:root {
+  --text-primary: #121212;
+  --text-secondary: #2d2d2d;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f3f4f6;
+}
+
+/* Dark mode styles */
+.dark {
+  --text-primary: #ffffff;
+  --text-secondary: #a3a3a3;
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+}
+
+body {
+  @apply bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-300;
+}
+
+.section-transition {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.neo-border {
+  @apply border border-neo-green shadow-neo-glow-green dark:border-neo-green dark:shadow-neo-glow-green;
+}
+
+.neo-border-blue {
+  @apply border border-neo-blue-bright shadow-neo-glow-blue dark:border-neo-blue-bright dark:shadow-neo-glow-blue;
+}
+
+.neo-button {
+  @apply px-4 py-2 border border-neo-green bg-transparent hover:bg-neo-green/20 hover:text-neo-green transition-all duration-300 shadow-neo-glow-green;
+}
+
+.neo-button-blue {
+  @apply px-4 py-2 border border-neo-blue-bright bg-transparent hover:bg-neo-blue-bright hover:text-[var(--bg-primary)] transition-all duration-300 shadow-neo-glow-blue;
+}
+
+.tech-badge {
+  @apply px-3 py-1 bg-[var(--bg-secondary)] text-neo-green border border-neo-green-dim rounded-md;
+}
+
+.project-card {
+  @apply bg-[var(--bg-secondary)] rounded-lg overflow-hidden border border-neo-gray hover:border-neo-green hover:shadow-neo-glow-green transition-all duration-300;
+}
+
+@keyframes matrix-effect {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.matrix-animation {
+  position: relative;
+  overflow: hidden;
+}
+
+.matrix-animation::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 255, 65, 0.05) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  pointer-events: none;
+}
