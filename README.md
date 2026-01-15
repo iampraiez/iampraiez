@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/wakatime?username=iampraiez&theme=react&hide_border=true&display_version=2" alt="WakaTime Stats" />
+  <img src="https://wakatime.com/badge/user/b5067977-8ed7-4ace-bf98-06108884302e.svg" alt="WakaTime Badge" />
 </p>
 
 
