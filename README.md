@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=My%20name%20is%20Praise&fontSize=60&animation=fadeIn" />
-</p>
+<h1 align="center">My name is Praise</h1>
 
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=00FF41&center=true&vCenter=true&width=435&lines=Backend+Developer;Aspiring+Elite+Engineer;Building+Scalable+Systems;Continuous+Learner" alt="Typing SVG" />
@@ -10,9 +8,10 @@
   <a href="https://github.com/iampraiez">
     <img src="https://komarev.com/ghpvc/?username=iampraiez&label=Profile%20views&color=00FF41&style=flat" alt="Profile views" />
   </a>
-  <a href="https://wakatime.com/@b5067977-8ed7-4ace-bf98-06108884302e">
-    <img src="https://img.shields.io/badge/WakaTime-00FF41?style=flat&logo=wakatime&logoColor=0D1117" alt="WakaTime" />
-  </a>
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/wakatime?username=iampraiez&theme=react&hide_border=true&display_version=2" alt="WakaTime Stats" />
 </p>
 
 
