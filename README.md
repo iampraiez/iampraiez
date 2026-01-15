@@ -1,4 +1,6 @@
-<h1 align="center">Praise Olaoye</h1>
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=00FF41&height=200&section=header&text=Praise%20Olaoye&fontSize=70&animation=fadeIn&fontColor=0D1117" />
+</p>
 
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=00FF41&center=true&vCenter=true&width=435&lines=Backend+Developer;Aspiring+Elite+Engineer;Building+Scalable+Systems;Continuous+Learner" alt="Typing SVG" />
@@ -8,6 +10,14 @@
   <a href="https://github.com/iampraiez">
     <img src="https://komarev.com/ghpvc/?username=iampraiez&label=Profile%20views&color=00FF41&style=flat" alt="Profile views" />
   </a>
+  <a href="https://wakatime.com/@iampraiez">
+    <img src="https://img.shields.io/badge/WakaTime-00FF41?style=flat&logo=wakatime&logoColor=0D1117" alt="WakaTime" />
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Cracking%20Code-00FF41?style=for-the-badge&logo=visual-studio-code&logoColor=0D1117" alt="Status" />
+  <img src="https://img.shields.io/badge/Focus-Backend%20Architecture-00FF41?style=for-the-badge&logo=node.js&logoColor=0D1117" alt="Focus" />
 </p>
 
 ---
