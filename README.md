@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=00FF41&height=200&section=header&text=Praise%20Olaoye&fontSize=70&animation=fadeIn&fontColor=0D1117" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=My%20name%20is%20Praise&fontSize=60&animation=fadeIn" />
 </p>
 
 <p align="center">
@@ -10,15 +10,11 @@
   <a href="https://github.com/iampraiez">
     <img src="https://komarev.com/ghpvc/?username=iampraiez&label=Profile%20views&color=00FF41&style=flat" alt="Profile views" />
   </a>
-  <a href="https://wakatime.com/@iampraiez">
+  <a href="https://wakatime.com/@b5067977-8ed7-4ace-bf98-06108884302e">
     <img src="https://img.shields.io/badge/WakaTime-00FF41?style=flat&logo=wakatime&logoColor=0D1117" alt="WakaTime" />
   </a>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Status-Cracking%20Code-00FF41?style=for-the-badge&logo=visual-studio-code&logoColor=0D1117" alt="Status" />
-  <img src="https://img.shields.io/badge/Focus-Backend%20Architecture-00FF41?style=for-the-badge&logo=node.js&logoColor=0D1117" alt="Focus" />
-</p>
 
 ---
 
