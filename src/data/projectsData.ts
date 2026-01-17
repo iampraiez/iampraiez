@@ -32,16 +32,6 @@ export const projects: Project[] = [
     image: "./memory.png",
   },
   {
-    id: 4,
-    title: "OctoSustain",
-    description:
-      "A Real-Time Eco-Collaboration Platform to Track your eco-impact with OctoPods. Multitask like an octopus and save the planet!",
-    stack: ["Nextjs", "TypeScript", "JWT", "Recharts", "Prisma ORM"],
-    githubUrl: "https://github.com/iampraiez/OctoSustain",
-    liveUrl: "https://octo-sustain.vercel.app",
-    image: "./octo.png",
-  },
-  {
     id: 5,
     title: "I-VOTEE",
     description:

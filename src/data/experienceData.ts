@@ -26,20 +26,6 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 3,
-    role: "Full Stack Developer (Hackathon Project)",
-    company: "OctoSustain",
-    period: "September 2025",
-    description: [
-      "Developed a real-time eco-collaboration platform using Next.js 15, TypeScript, and Tailwind CSS for a hackathon.",
-      "Implemented an interactive octopus dashboard with animated SVG visualizations using Recharts and Socket.io for real-time updates.",
-      "Designed and integrated a PostgreSQL database with Prisma ORM for tracking sustainability metrics across six categories.",
-      "Built a gamified challenge system with leaderboards, custom challenges, and team-based progress tracking.",
-      "Integrated JWT authentication with HTTP-only cookies and secure file uploads using Vercel Blob.",
-      "Contributed to a polished, production-ready UI with shadcn/ui components and a cohesive eco-themed design system.",
-    ],
-  },
-  {
     id: 4,
     role: "Full Stack Developer",
     company: "Memory Lane",
