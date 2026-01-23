@@ -18,23 +18,20 @@
     <img src="https://komarev.com/ghpvc/?username=iampraiez&label=PROFILE+VIEWS&style=for-the-badge&color=green" />
   </a>&nbsp;&nbsp;
  <a href="https://wakatime.com/@b5067977-8ed7-4ace-bf98-06108884302e"><img src="https://wakatime.com/badge/user/b5067977-8ed7-4ace-bf98-06108884302e.svg" alt="Total time coded" /></a>
-  <p align = "left">
+  <p align = "center">
   <img src = "https://github-readme-stats.vercel.app/api?username=iampraiez&show_icons=true&theme=tokyonight&line_height=25">
   </p>
-  <p align = "left">
+  <p align = "center">
   <img src = "https://github-readme-stats.vercel.app/api/top-langs/?username=iampraiez&langs_count=6&layout=compact&theme=tokyonight">
   </p>
-  <p align="left">
-   <img src = "http://github-readme-streak-stats.herokuapp.com?user=iampraiez&theme=blueberry&date_format=M%20j%5B%2C%20Y%5D">
 </p>
- 
 </p>
 
 ---
 
 ### 🛠️ Tech Stack
 
-<p align="left">
+<p align="center">
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
   <img src="https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white" alt="NestJS" />
