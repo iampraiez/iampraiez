@@ -4,6 +4,8 @@
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=00FF41&center=true&vCenter=true&width=435&lines=Backend+Developer;Aspiring+Elite+Engineer;Building+Scalable+Systems;Continuous+Learner" alt="Typing SVG" />
 </p>
 
+<h3 align="center">📫 Reach Me Here</h3>
+
 <p align='center'>
 <a href="https://wa.me/2339166072665?text=Yo+man,wys?" target="_blank">
   <img src="https://img.shields.io/badge/WHATSAPP-%2325D366.svg?&style=for-the-badge&logo=whatsapp&logoColor=white" />
@@ -18,18 +20,17 @@
     <img src="https://komarev.com/ghpvc/?username=iampraiez&label=PROFILE+VIEWS&style=for-the-badge&color=green" />
   </a>&nbsp;&nbsp;
  <a href="https://wakatime.com/@b5067977-8ed7-4ace-bf98-06108884302e"><img src="https://wakatime.com/badge/user/b5067977-8ed7-4ace-bf98-06108884302e.svg" alt="Total time coded" /></a>
-  <p align = "center">
+  <p align = "left">
   <img src = "https://github-readme-stats.vercel.app/api?username=iampraiez&show_icons=true&theme=tokyonight&line_height=25">
   </p>
-  <p align = "center">
+  <p align = "left">
   <img src = "https://github-readme-stats.vercel.app/api/top-langs/?username=iampraiez&langs_count=6&layout=compact&theme=tokyonight">
   </p>
-</p>
 </p>
 
 ---
 
-### 🛠️ Tech Stack
+<h3 align="center">🛠️ Tech Stack</h3>
 
 <p align="center">
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
