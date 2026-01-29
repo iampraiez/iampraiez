@@ -31,14 +31,4 @@ export const projects: Project[] = [
     liveUrl: "https://memory-lane-chi.vercel.app/",
     image: "./memory.png",
   },
-  {
-    id: 5,
-    title: "I-VOTEE",
-    description:
-      "A comprehensive, secure e-voting platform designed specifically for universities with cryptographic integrity verification, role-based access control, and mobile-first design.",
-    stack: ["React", "Nodejs", "TypeScript", "JWT", "Crypto", "Prisma ORM"],
-    githubUrl: "https://github.com/iampraiez/voting_app",
-    liveUrl: "https://voting-app-topaz.vercel.app/",
-    image: "./vote.png",
-  },
 ];
