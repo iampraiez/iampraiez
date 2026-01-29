@@ -1,8 +1,4 @@
-<h1 align="center">My name is Praise</h1>
-
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=00FF41&center=true&vCenter=true&width=435&lines=Backend+Developer;Aspiring+Elite+Engineer;Building+Scalable+Systems;Continuous+Learner" alt="Typing SVG" />
-</p>
+<h1 align="center">Hi Github 👋,my name is Praise</h1>
 
 <h3 align="center">📫 Reach Me Here</h3>
 
@@ -20,9 +16,6 @@
     <img src="https://komarev.com/ghpvc/?username=iampraiez&label=PROFILE+VIEWS&style=for-the-badge&color=green" />
   </a>&nbsp;&nbsp;
  <a href="https://wakatime.com/@b5067977-8ed7-4ace-bf98-06108884302e"><img src="https://wakatime.com/badge/user/b5067977-8ed7-4ace-bf98-06108884302e.svg" alt="Total time coded" /></a>
-  <p align = "left">
-  <img src = "https://github-readme-stats.vercel.app/api?username=iampraiez&show_icons=true&theme=tokyonight&line_height=25">
-  </p>
   <p align = "left">
   <img src = "https://github-readme-stats.vercel.app/api/top-langs/?username=iampraiez&langs_count=6&layout=compact&theme=tokyonight">
   </p>
