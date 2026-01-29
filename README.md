@@ -17,6 +17,9 @@
   </a>&nbsp;&nbsp;
  <a href="https://wakatime.com/@b5067977-8ed7-4ace-bf98-06108884302e"><img src="https://wakatime.com/badge/user/b5067977-8ed7-4ace-bf98-06108884302e.svg" alt="Total time coded" /></a>
   <p align = "left">
+  <img src = "https://github-readme-stats.vercel.app/api?username=iampraiez&show_icons=true&theme=tokyonight&line_height=25">
+  </p>
+  <p align = "left">
   <img src = "https://github-readme-stats.vercel.app/api/top-langs/?username=iampraiez&langs_count=6&layout=compact&theme=tokyonight">
   </p>
 </p>
