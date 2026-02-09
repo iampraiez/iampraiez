@@ -1,9 +1,10 @@
-import React from "react";
 import { motion } from "framer-motion";
-import { Download, ArrowDown } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import Button from "../ui/Button";
+import ResumeDropdown from "../ui/ResumeDropdown";
 
-const Hero: React.FC = () => {
+
+const Hero = () => {
   return (
     <section
       id="home"
@@ -44,7 +45,7 @@ const Hero: React.FC = () => {
               </span>
             </motion.div>
             <motion.div
-              className="flex flex-wrap gap-4"
+              className="flex flex-wrap gap-4 items-center"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.1, duration: 0.5 }}
@@ -52,15 +53,7 @@ const Hero: React.FC = () => {
               <Button href="#projects">
                 View Projects
               </Button>
-              <Button
-                variant="secondary"
-                className="flex items-center space-x-2"
-                href="./resume.pdf"
-                download="Praise_Olaoye_Resume"
-              >
-                <Download size={16} />
-                <span>Download Resume</span>
-              </Button>
+              <ResumeDropdown />
             </motion.div>
           </motion.div>
 
