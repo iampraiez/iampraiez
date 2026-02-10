@@ -22,6 +22,7 @@ function isValidEmail(email: string): boolean {
 
 export async function POST(req: Request) {
   try {
+    console.log("Received contact form submission");
     const ip = req.headers.get("x-forwarded-for") || "anonymous";
     const now = Date.now();
     const rateData = rateLimitMap.get(ip);
@@ -71,11 +72,11 @@ export async function POST(req: Request) {
     });
 
     const mailOptions = {
-      from: sanitizedEmail,
+      from: `"${sanitizedName}" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER,
       subject: `New message from ${sanitizedName}`,
       text: `You have received a new message from ${sanitizedName} (${sanitizedEmail}):\n\n${sanitizedMessage}`,
-      replyTo: sanitizedEmail
+      replyTo: sanitizedEmail,
     };
 
     await transporter.sendMail(mailOptions);

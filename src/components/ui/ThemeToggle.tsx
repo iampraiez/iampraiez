@@ -10,7 +10,9 @@ const ThemeToggle: React.FC = () => {
     <motion.button
       whileTap={{ scale: 0.95 }}
       onClick={toggleDarkMode}
-      className="p-2 rounded-full bg-neo-gray text-white"
+      className={`p-2 rounded-full transition-colors ${
+        darkMode ? "bg-neo-gray text-white" : "bg-gray-300 text-gray-800"
+      }`}
       aria-label="Toggle dark mode"
     >
       {darkMode ? (
