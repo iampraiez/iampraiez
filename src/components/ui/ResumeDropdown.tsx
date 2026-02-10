@@ -102,7 +102,7 @@ const ResumeDropdown = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="absolute left-0 mt-2 w-48 bg-neo-dark-lighter border border-neo-blue-bright/30 rounded-lg shadow-xl overflow-hidden z-50 backdrop-blur-md"
+            className="absolute left-0 mt-2 w-48 bg-(--bg-secondary) border border-neo-blue-bright/30 rounded-lg shadow-xl overflow-hidden z-50 backdrop-blur-md"
           >
             <div className="py-1">
               {resumeOptions.map((option) => {
@@ -111,7 +111,7 @@ const ResumeDropdown = () => {
                   <button
                     key={option.id}
                     onClick={() => handleDownload(option.file, option.title)}
-                    className="w-full text-left px-4 py-3 text-sm text-gray-300 hover:bg-neo-blue-bright/10 hover:text-neo-blue-bright transition-colors flex items-center space-x-3 group"
+                    className="w-full text-left px-4 py-3 text-sm text-(--text-primary) hover:bg-neo-blue-bright/10 hover:text-neo-blue-bright transition-colors flex items-center space-x-3 group"
                   >
                     <Icon
                       size={16}

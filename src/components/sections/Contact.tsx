@@ -15,18 +15,18 @@ const Contact: React.FC = () => {
     message: "",
   });
 
-  async function handleEmail() {
-    await axios
-      .post("/api/send", formData)
-      .then(() => {
-        toast.success("Email sent successfully!");
-        setIsSuccess(true);
-        setTimeout(() => setIsSuccess(false), 2000);
-      })
-      .catch((err) => {
-        console.error("Error sending email:", err);
-        toast.error("Error sending email!");
-      });
+  async function handleEmail(data: typeof formData) {
+    try {
+      await axios.post("/api/send", data);
+      toast.success("Email sent successfully!");
+      setIsSuccess(true);
+      setTimeout(() => setIsSuccess(false), 2000);
+      setFormData({ name: "", email: "", message: "" });
+    } catch (err: any) {
+      console.error("Error sending email:", err);
+      const errorMessage = err.response?.data?.message || "Error sending email!";
+      toast.error(errorMessage);
+    }
   }
 
   const handleChange = (
@@ -37,10 +37,22 @@ const Contact: React.FC = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    setIsLoading(true);
     e.preventDefault();
-    await handleEmail();
-    setFormData({ name: "", email: "", message: "" });
+    setIsLoading(true);
+    
+    const cleanedData = {
+      name: formData.name.trim(),
+      email: formData.email.trim(),
+      message: formData.message.trim(),
+    };
+
+    if (!cleanedData.name || !cleanedData.email || !cleanedData.message) {
+      toast.error("Please fill in all fields.");
+      setIsLoading(false);
+      return;
+    }
+
+    await handleEmail(cleanedData);
     setIsLoading(false);
   };
 

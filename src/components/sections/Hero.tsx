@@ -62,13 +62,13 @@ const Hero = () => {
             transition={{ duration: 0.7 }}
           >
             <div className="w-80 h-80 rounded-full border-4 border-neo-green p-2 relative shadow-neo-glow-green">
-              <div className="w-full h-full rounded-full overflow-hidden border-2 border-neo-green-dim">
+              <div className="w-full h-full rounded-full overflow-hidden border-2 border-neo-green-dim relative">
                 <Image
                   alt="Praise Olaoye"
-                  src="./Praise.jpg"
-                  className="w-full h-full object-cover"
+                  src="/Praise.jpg"
+                  className="object-cover"
                   fill
-                  sizes="100vw"
+                  priority
                 />
               </div>
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-neo-dark-lighter rounded-full flex items-center justify-center border-2 border-neo-green shadow-neo-glow-green">

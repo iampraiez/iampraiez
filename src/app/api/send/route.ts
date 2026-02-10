@@ -1,13 +1,63 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
+const rateLimitMap = new Map<string, { count: number; lastReset: number }>();
+const LIMIT = 3;
+const WINDOW = 30 * 60 * 1000;
+
+function sanitize(str: string): string {
+  if (!str) return "";
+  return str
+    .trim()
+    .replace(/[<>]/g, (tag) => {
+      const map: Record<string, string> = { "<": "&lt;", ">": "&gt;" };
+      return map[tag] || tag;
+    })
+    .slice(0, 2000); 
+}
+
+function isValidEmail(email: string): boolean {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
 export async function POST(req: Request) {
   try {
+    const ip = req.headers.get("x-forwarded-for") || "anonymous";
+    const now = Date.now();
+    const rateData = rateLimitMap.get(ip);
+
+    if (rateData) {
+      if (now - rateData.lastReset < WINDOW) {
+        if (rateData.count >= LIMIT) {
+          return NextResponse.json(
+            { message: "Too many requests. Please try again later." },
+            { status: 429 }
+          );
+        }
+        rateData.count += 1;
+      } else {
+        rateLimitMap.set(ip, { count: 1, lastReset: now });
+      }
+    } else {
+      rateLimitMap.set(ip, { count: 1, lastReset: now });
+    }
+
     const { name, email, message } = await req.json();
 
-    if (!name || !email || !message) {
+    const sanitizedName = sanitize(name);
+    const sanitizedEmail = email?.trim().toLowerCase();
+    const sanitizedMessage = sanitize(message);
+
+    if (!sanitizedName || !sanitizedEmail || !sanitizedMessage) {
       return NextResponse.json(
         { message: "Missing required fields" },
+        { status: 400 }
+      );
+    }
+
+    if (!isValidEmail(sanitizedEmail)) {
+      return NextResponse.json(
+        { message: "Invalid email format" },
         { status: 400 }
       );
     }
@@ -21,10 +71,11 @@ export async function POST(req: Request) {
     });
 
     const mailOptions = {
-      from: email,
+      from: sanitizedEmail,
       to: process.env.EMAIL_USER,
-      subject: `New message from ${name}`,
-      text: `You have received a new message from ${name} (${email}):\n\n${message}`,
+      subject: `New message from ${sanitizedName}`,
+      text: `You have received a new message from ${sanitizedName} (${sanitizedEmail}):\n\n${sanitizedMessage}`,
+      replyTo: sanitizedEmail
     };
 
     await transporter.sendMail(mailOptions);
