@@ -1,4 +1,3 @@
-import React from "react";
 import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
 import "./globals.css";
@@ -22,22 +21,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}): any {
-  const Html = "html" as any;
-  const Body = "body" as any;
-  const TProvider = ThemeProvider as any;
-  const Toast = Toaster as any;
-
+}>) {
   return (
-    <Html lang="en">
-      <Body className={`${firaCode.className} ${firaCode.variable} antialiased`}>
-        <TProvider>
-          <Toast position="top-right" richColors />
+    <html lang="en">
+      <body
+        className={`${firaCode.className} ${firaCode.variable} antialiased`}
+      >
+        <ThemeProvider>
+          <Toaster position="top-right" richColors />
           {children}
-        </TProvider>
-      </Body>
-    </Html>
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }

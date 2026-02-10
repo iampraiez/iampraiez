@@ -111,9 +111,12 @@ const ResumeDropdown = () => {
                   <button
                     key={option.id}
                     onClick={() => handleDownload(option.file, option.title)}
-                    className="w-full text-left px-4 py-3 text-sm text-gray-300 hover:bg-neo-blue-bright/10 hover:text-neo-blue-bright transition-colors flex items-center space-x-3 group text-sm"
+                    className="w-full text-left px-4 py-3 text-sm text-gray-300 hover:bg-neo-blue-bright/10 hover:text-neo-blue-bright transition-colors flex items-center space-x-3 group"
                   >
-                    <Icon size={16} className={`${option.color} group-hover:scale-110 transition-transform`} />
+                    <Icon
+                      size={16}
+                      className={`${option.color} group-hover:scale-110 transition-transform`}
+                    />
                     <span className="font-mono">{option.title}</span>
                   </button>
                 );

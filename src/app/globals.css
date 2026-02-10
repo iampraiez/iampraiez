@@ -60,7 +60,7 @@ body {
 }
 
 body {
-  @apply bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-300;
+  @apply bg-(--bg-primary) text-(--text-primary) transition-colors duration-300;
 }
 
 .section-transition {
@@ -80,15 +80,15 @@ body {
 }
 
 .neo-button-blue {
-  @apply px-4 py-2 border border-neo-blue-bright bg-transparent hover:bg-neo-blue-bright hover:text-[var(--bg-primary)] transition-all duration-300 shadow-neo-glow-blue;
+  @apply px-4 py-2 border border-neo-blue-bright bg-transparent hover:bg-neo-blue-bright hover:text-(--bg-primary) transition-all duration-300 shadow-neo-glow-blue;
 }
 
 .tech-badge {
-  @apply px-3 py-1 bg-[var(--bg-secondary)] text-neo-green border border-neo-green-dim rounded-md;
+  @apply px-3 py-1 bg-(--bg-secondary) text-neo-green border border-neo-green-dim rounded-md;
 }
 
 .project-card {
-  @apply bg-[var(--bg-secondary)] rounded-lg overflow-hidden border border-neo-gray hover:border-neo-green hover:shadow-neo-glow-green transition-all duration-300;
+  @apply bg-(--bg-secondary) rounded-lg overflow-hidden border border-neo-gray hover:border-neo-green hover:shadow-neo-glow-green transition-all duration-300;
 }
 
 @keyframes matrix-effect {

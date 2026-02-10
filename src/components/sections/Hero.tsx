@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import Button from "../ui/Button";
 import ResumeDropdown from "../ui/ResumeDropdown";
-
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -31,7 +31,7 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.7, duration: 0.5 }}
             >
-              I'm <span className="text-neo-green">Praise Olaoye</span>
+              I&apos;m <span className="text-neo-green">Praise Olaoye</span>
             </motion.h1>
             <motion.div
               className="text-xl md:text-2xl text-gray-300 mb-6"
@@ -50,9 +50,7 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 1.1, duration: 0.5 }}
             >
-              <Button href="#projects">
-                View Projects
-              </Button>
+              <Button href="#projects">View Projects</Button>
               <ResumeDropdown />
             </motion.div>
           </motion.div>
@@ -65,10 +63,12 @@ const Hero = () => {
           >
             <div className="w-80 h-80 rounded-full border-4 border-neo-green p-2 relative shadow-neo-glow-green">
               <div className="w-full h-full rounded-full overflow-hidden border-2 border-neo-green-dim">
-                <img
+                <Image
                   alt="Praise Olaoye"
                   src="./Praise.jpg"
                   className="w-full h-full object-cover"
+                  fill
+                  sizes="100vw"
                 />
               </div>
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-neo-dark-lighter rounded-full flex items-center justify-center border-2 border-neo-green shadow-neo-glow-green">

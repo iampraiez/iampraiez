@@ -1,9 +1,16 @@
 "use client";
-import React, { createContext, useState, useEffect, useContext } from "react";
+import React, {
+  createContext,
+  useState,
+  useContext,
+  useEffect,
+  useCallback,
+} from "react";
 
 interface ThemeContextType {
   darkMode: boolean;
   toggleDarkMode: () => void;
+  isSystemTheme: boolean;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
@@ -11,25 +18,50 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState<boolean>(false);
+  const [isSystemTheme, setIsSystemTheme] = useState(true);
 
   useEffect(() => {
-    const isDarkMode = localStorage.getItem("darkMode") === "true";
-    setDarkMode(isDarkMode);
-    document.documentElement.classList.toggle("dark", isDarkMode);
+    const saved = localStorage.getItem("darkMode");
+
+    if (saved !== null) {
+      setDarkMode(saved === "true");
+      setIsSystemTheme(false);
+    } else {
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
+      setDarkMode(prefersDark);
+      setIsSystemTheme(true);
+    }
   }, []);
 
-  const toggleDarkMode = () => {
-    setDarkMode((prev) => {
-      const newMode = !prev;
-      localStorage.setItem("darkMode", String(newMode));
-      document.documentElement.classList.toggle("dark", newMode);
-      return newMode;
-    });
-  };
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", darkMode);
+  }, [darkMode]);
+
+  useEffect(() => {
+    if (!isSystemTheme) return;
+
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      setDarkMode(e.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleChange);
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, [isSystemTheme]);
+
+  const toggleDarkMode = useCallback(() => {
+    const newMode = !darkMode;
+    setDarkMode(newMode);
+    setIsSystemTheme(false);
+    localStorage.setItem("darkMode", String(newMode));
+  }, [darkMode]);
 
   return (
-    <ThemeContext.Provider value={{ darkMode, toggleDarkMode }}>
+    <ThemeContext.Provider value={{ darkMode, toggleDarkMode, isSystemTheme }}>
       {children}
     </ThemeContext.Provider>
   );

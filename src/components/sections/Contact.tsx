@@ -18,11 +18,10 @@ const Contact: React.FC = () => {
   async function handleEmail() {
     await axios
       .post("/api/send", formData)
-      .then((res: any) => {
+      .then(() => {
         toast.success("Email sent successfully!");
         setIsSuccess(true);
         setTimeout(() => setIsSuccess(false), 2000);
-        // console.log("Success:", res.data);
       })
       .catch((err) => {
         console.error("Error sending email:", err);
@@ -63,22 +62,22 @@ const Contact: React.FC = () => {
             <h3 className="text-2xl font-semibold text-neo-green mb-6">
               Contact Information
             </h3>
-            <p className="text-[var(--text-secondary)] mb-8">
+            <p className="text-(--text-secondary) mb-8">
               Feel free to reach out for collaboration opportunities, job
-              inquiries, or just to say hello. I'm always open to discussing new
-              projects and ideas.
+              inquiries, or just to say hello. I&apos;m always open to
+              discussing new projects and ideas.
             </p>
 
             <div className="space-y-6">
               <motion.div className="flex items-center" whileHover={{ x: 5 }}>
-                <div className="w-12 h-12 rounded-full bg-[var(--bg-secondary)] flex items-center justify-center mr-4">
+                <div className="w-12 h-12 rounded-full bg-(--bg-secondary) flex items-center justify-center mr-4">
                   <Mail className="text-neo-green" />
                 </div>
                 <div>
-                  <p className="text-[var(--text-secondary)] text-sm">Email</p>
+                  <p className="text-(--text-secondary) text-sm">Email</p>
                   <a
                     href="mailto:himpraise571@gmail.com"
-                    className="text-[var(--text-primary)] hover:text-neo-green"
+                    className="text-(--text-primary) hover:text-neo-green"
                   >
                     himpraise571@gmail.com
                   </a>
@@ -86,16 +85,16 @@ const Contact: React.FC = () => {
               </motion.div>
 
               <motion.div className="flex items-center" whileHover={{ x: 5 }}>
-                <div className="w-12 h-12 rounded-full bg-[var(--bg-secondary)] flex items-center justify-center mr-4">
+                <div className="w-12 h-12 rounded-full bg-(--bg-secondary) flex items-center justify-center mr-4">
                   <Github className="text-neo-green" />
                 </div>
                 <div>
-                  <p className="text-[var(--text-secondary)] text-sm">GitHub</p>
+                  <p className="text-(--text-secondary) text-sm">GitHub</p>
                   <a
                     href="https://github.com/iampraiez"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[var(--text-primary)] hover:text-neo-green"
+                    className="text-(--text-primary) hover:text-neo-green"
                   >
                     github.com/iampraiez
                   </a>
@@ -103,18 +102,16 @@ const Contact: React.FC = () => {
               </motion.div>
 
               <motion.div className="flex items-center" whileHover={{ x: 5 }}>
-                <div className="w-12 h-12 rounded-full bg-[var(--bg-secondary)] flex items-center justify-center mr-4">
+                <div className="w-12 h-12 rounded-full bg-(--bg-secondary) flex items-center justify-center mr-4">
                   <Linkedin className="text-neo-green" />
                 </div>
                 <div>
-                  <p className="text-[var(--text-secondary)] text-sm">
-                    LinkedIn
-                  </p>
+                  <p className="text-(--text-secondary) text-sm">LinkedIn</p>
                   <a
                     href="https://www.linkedin.com/in/thepraiseolaoye"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[var(--text-primary)] hover:text-neo-green"
+                    className="text-(--text-primary) hover:text-neo-green"
                   >
                     linkedin.com/in/praise-olaoye
                   </a>
@@ -131,12 +128,12 @@ const Contact: React.FC = () => {
           >
             <form
               onSubmit={handleSubmit}
-              className="bg-[var(--bg-secondary)] p-8 rounded-lg border border-neo-gray"
+              className="bg-(--bg-secondary) p-8 rounded-lg border border-neo-gray"
             >
               <div className="mb-6">
                 <label
                   htmlFor="name"
-                  className="block text-[var(--text-secondary)] mb-2"
+                  className="block text-(--text-secondary) mb-2"
                 >
                   Name
                 </label>
@@ -147,14 +144,14 @@ const Contact: React.FC = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full bg-[var(--bg-primary)] border border-neo-gray focus:border-neo-green text-[var(--text-primary)] px-4 py-3 rounded-md focus:outline-none"
+                  className="w-full bg-(--bg-primary) border border-neo-gray focus:border-neo-green text-(--text-primary) px-4 py-3 rounded-md focus:outline-none"
                 />
               </div>
 
               <div className="mb-6">
                 <label
                   htmlFor="email"
-                  className="block text-[var(--text-secondary)] mb-2"
+                  className="block text-(--text-secondary) mb-2"
                 >
                   Email
                 </label>
@@ -165,14 +162,14 @@ const Contact: React.FC = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full bg-[var(--bg-primary)] border border-neo-gray focus:border-neo-green text-[var(--text-primary)] px-4 py-3 rounded-md focus:outline-none"
+                  className="w-full bg-(--bg-primary) border border-neo-gray focus:border-neo-green text-(--text-primary) px-4 py-3 rounded-md focus:outline-none"
                 />
               </div>
 
               <div className="mb-6">
                 <label
                   htmlFor="message"
-                  className="block text-[var(--text-secondary)] mb-2"
+                  className="block text-(--text-secondary) mb-2"
                 >
                   Message
                 </label>
@@ -183,14 +180,16 @@ const Contact: React.FC = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full bg-[var(--bg-primary)] border border-neo-gray focus:border-neo-green text-[var(--text-primary)] px-4 py-3 rounded-md resize-none focus:outline-none"
+                  className="w-full bg-(--bg-primary) border border-neo-gray focus:border-neo-green text-(--text-primary) px-4 py-3 rounded-md resize-none focus:outline-none"
                 ></textarea>
               </div>
 
               <Button
                 type="submit"
                 className={`w-full flex items-center justify-center space-x-2 transition-all ${
-                  isSuccess ? "!bg-neo-green !text-[var(--bg-primary)] !border-neo-green" : ""
+                  isSuccess
+                    ? "bg-neo-green! text-(--bg-primary)! border-neo-green!"
+                    : ""
                 }`}
               >
                 {isLoading ? (

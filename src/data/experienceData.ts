@@ -5,7 +5,7 @@ export const experiences: Experience[] = [
     id: 1,
     role: "Full Stack Developer",
     company: "Memory Lane (Personal Project)",
-    period: "June 2025",
+    period: "Febuary 2026",
     description: [
       "Built an AI-powered personal timeline application using Next.js 16, PostgreSQL, and Google Gemini AI with comprehensive memory capture and family sharing features.",
       "Engineered a warm, accessible design system with Tailwind CSS 4, achieving WCAG 2.1 AA compliance and implementing advanced components like MediaUploader, DatePicker, and infinite scroll timeline.",
@@ -33,7 +33,7 @@ export const experiences: Experience[] = [
     id: 3,
     role: "Full Stack Developer",
     company: "Nexus Analytics (Personal Project)",
-    period: "May 2025",
+    period: "January 2026",
     description: [
       "Engineered a production-ready analytics platform using Next.js 15, MongoDB, and Google Gemini 2.0 Flash, processing 10,000+ events/second with sub-100ms query performance.",
       "Built custom event-tracking SDK (nexus-avail) from scratch with zero dependencies, achieving 8KB minified size, featuring automatic environment detection (Browser/Node.js), offline persistence, and exponential backoff retry logic.",

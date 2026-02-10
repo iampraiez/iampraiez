@@ -6,7 +6,7 @@ import SectionHeading from "../ui/SectionHeading";
 
 const Experience: React.FC = () => {
   return (
-    <section id="experience" className="py-20 bg-[var(--bg-secondary)]">
+    <section id="experience" className="py-20 bg-(--bg-secondary)">
       <div className="container mx-auto px-4">
         <SectionHeading
           title="Experience"
@@ -29,14 +29,14 @@ const Experience: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="relative bg-[var(--bg-primary)] p-6 rounded-lg border border-neo-gray hover:border-neo-green transition-all duration-300">
+                <div className="relative bg-(--bg-primary) p-6 rounded-lg border border-neo-gray hover:border-neo-green transition-all duration-300">
                   {/* Timeline bullet */}
                   <div
                     className={`absolute top-6 ${
                       index % 2 === 0
-                        ? "-left-6 md:-left-[18px]"
-                        : "-left-6 md:-right-[18px] md:left-auto"
-                    } w-[36px] h-[36px] bg-[var(--bg-primary)] border-4 border-neo-green rounded-full flex items-center justify-center shadow-neo-glow-green`}
+                        ? "-left-6 md:-left-4.5"
+                        : "-left-6 md:-right-4.5 md:left-auto"
+                    } w-9 h-9 bg-(--bg-primary) border-4 border-neo-green rounded-full flex items-center justify-center shadow-neo-glow-green`}
                   >
                     <Briefcase size={16} className="text-neo-green" />
                   </div>
@@ -45,7 +45,7 @@ const Experience: React.FC = () => {
                     <h3 className="text-xl font-semibold text-neo-green">
                       {exp.role}
                     </h3>
-                    <div className="flex items-center text-[var(--text-secondary)] mt-2 md:mt-0">
+                    <div className="flex items-center text-(--text-secondary) mt-2 md:mt-0">
                       <Calendar size={16} className="mr-1" />
                       <span className="text-sm">{exp.period}</span>
                     </div>
@@ -55,7 +55,7 @@ const Experience: React.FC = () => {
                     {exp.company}
                   </h4>
 
-                  <ul className="list-disc list-inside text-[var(--text-secondary)] space-y-2">
+                  <ul className="list-disc list-inside text-(--text-secondary) space-y-2">
                     {exp.description.map((item, idx) => (
                       <li key={idx}>{item}</li>
                     ))}

@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import SectionHeading from "../ui/SectionHeading";
+import Image from "next/image";
 
 const techStacks = [
   "Node.js",
@@ -39,7 +40,7 @@ const item = {
 const About: React.FC = () => {
   //picture of me with laptop I guess from backend
   return (
-    <section id="about" className="py-20 bg-[var(--bg-secondary)]">
+    <section id="about" className="py-20 bg-(--bg-secondary)">
       <div className="container mx-auto px-4">
         <SectionHeading
           title="About Me"
@@ -54,22 +55,22 @@ const About: React.FC = () => {
             transition={{ duration: 0.7 }}
             className="order-2 md:order-1"
           >
-            <motion.p className="text-[var(--text-secondary)] mb-4">
-              I'm a Backend-focused full stack developer with expertise in
+            <motion.p className="text-(--text-secondary) mb-4">
+              I&apos;m a Backend-focused full stack developer with expertise in
               building fast and scalable web applications. With a focus on
               Node.js and the modern JavaScript ecosystem, I create robust
               solutions that power seamless user experiences.
             </motion.p>
-            <motion.p className="text-[var(--text-secondary)] mb-4">
+            <motion.p className="text-(--text-secondary) mb-4">
               My specialty lies in developing RESTful APIs, implementing
-              authentication systems, and optimizing database performance. I'm
-              also experienced with React for frontend development, allowing me
-              to understand and collaborate effectively with full-stack
-              projects.
+              authentication systems, and optimizing database performance.
+              I&apos;m also experienced with React for frontend development,
+              allowing me to understand and collaborate effectively with
+              full-stack projects.
             </motion.p>
-            <motion.p className="text-[var(--text-secondary)] mb-6">
-              I'm committed to writing clean, maintainable code following best
-              practices and design patterns. My goal is to create efficient
+            <motion.p className="text-(--text-secondary) mb-6">
+              I&apos;m committed to writing clean, maintainable code following
+              best practices and design patterns. My goal is to create efficient
               solutions that solve real-world problems while ensuring security,
               scalability, and performance.
             </motion.p>
@@ -107,15 +108,18 @@ const About: React.FC = () => {
           >
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-lg overflow-hidden neo-border">
-                <img
+                <Image
                   src="./design.svg"
                   alt="Backend Developer Abstract design"
                   className="w-full h-full object-cover"
+                  sizes="(max-width: 768px) 256px, 320px"
+                  width={320}
+                  height={320}
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 w-full h-full rounded-lg border border-neo-blue-bright z-[-1]"></div>
               <motion.div
-                className="absolute -top-6 -left-6 p-4 bg-[var(--bg-primary)] neo-border-blue"
+                className="absolute -top-6 -left-6 p-4 bg-(--bg-primary) neo-border-blue"
                 initial={{ rotate: -5 }}
                 animate={{ rotate: 0 }}
                 transition={{ duration: 0.5 }}
