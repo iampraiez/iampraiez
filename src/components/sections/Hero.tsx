@@ -50,7 +50,7 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 1.1, duration: 0.5 }}
             >
-              <Button href="#projects">View Projects</Button>
+              <Button href="#projects" new_tab={false}>View Projects</Button>
               <ResumeDropdown />
             </motion.div>
           </motion.div>

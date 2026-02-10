@@ -9,6 +9,7 @@ interface ButtonProps {
   className?: string;
   href?: string;
   download?: string;
+  new_tab?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -18,7 +19,8 @@ const Button: React.FC<ButtonProps> = ({
   variant = 'primary',
   className = '',
   href,
-  download
+  download,
+  new_tab = false
 }) => {
   const baseClasses = variant === 'primary' 
     ? 'neo-button' 
@@ -33,7 +35,7 @@ const Button: React.FC<ButtonProps> = ({
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         className={buttonClasses}
-        target="_blank"
+        target={new_tab ? "_blank" : "_self"} 
         rel="noopener noreferrer"
         download={download}
       >
