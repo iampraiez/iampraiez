@@ -67,7 +67,7 @@ const Navbar: React.FC = () => {
                     className={`hover:text-neo-green transition-colors ${
                       activeSection === link.href.substring(1)
                         ? "text-neo-green"
-                        : "text-gray-300"
+                        : "text-(--text-secondary)"
                     }`}
                   >
                     {link.name}
@@ -94,7 +94,7 @@ const Navbar: React.FC = () => {
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white focus:outline-none"
+              className="text-(--text-primary) focus:outline-none"
               aria-label="Toggle Menu"
             >
               {isOpen ? <X /> : <Menu />}
@@ -107,7 +107,7 @@ const Navbar: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="md:hidden bg-neo-dark-lighter border-t border-neo-gray"
+            className="md:hidden bg-(--bg-secondary) border-t border-neo-gray"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -128,7 +128,7 @@ const Navbar: React.FC = () => {
                       className={`block py-2 ${
                         activeSection === link.href.substring(1)
                           ? "text-neo-green"
-                          : "text-gray-300"
+                          : "text-(--text-secondary)"
                       }`}
                       onClick={() => setIsOpen(false)}
                     >
