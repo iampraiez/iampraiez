@@ -17,5 +17,3 @@
   </a>&nbsp;&nbsp;
  <a href="https://wakatime.com/@b5067977-8ed7-4ace-bf98-06108884302e"><img src="https://wakatime.com/badge/user/b5067977-8ed7-4ace-bf98-06108884302e.svg" alt="Total time coded" /></a>
 </p>
----
-
