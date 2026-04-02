@@ -60,9 +60,9 @@ export function Hero({ setActiveTab }: { setActiveTab: (tab: Tab) => void }) {
           className="flex flex-col w-full lg:max-w-md space-y-8 lg:pb-6"
         >
           <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
-            Architecting scalable, intelligent systems with precision and
-            passion. Specializing in building production-ready, highly
-            performant full-stack applications and robust data pipelines.
+            Building scalable, secure and efficient software systems. Focused on
+            high-performance backends that deliver fast request times and stay
+            reliable as they scale.
           </p>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-8 pt-2">

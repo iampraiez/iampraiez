@@ -128,7 +128,7 @@ const INTERESTS = [
     icon: Music,
     label: "Music",
     description:
-      "Always with a playlist running — music is part of the workflow.",
+      "With how much I listen to music, spotify should probably charge more.",
     href: "https://open.spotify.com/user/31sgdsdq7jbvzf6uocnznhjr7nau",
     linkLabel: "Spotify Profile",
   },
@@ -136,7 +136,7 @@ const INTERESTS = [
     icon: Puzzle,
     label: "Chess",
     description:
-      "I treat the board the same way I treat architecture — every move is deliberate.",
+      "I hate losing at chess(or anything really), but I keep coming back anyway.",
     href: "https://www.chess.com/member/iampraiez",
     linkLabel: "Chess Profile",
   },
@@ -144,9 +144,7 @@ const INTERESTS = [
     icon: BookOpen,
     label: "Articles",
     description:
-      "Constantly reading across tech, design, and culture to stay sharp.",
-    href: "https://medium.com/@himpraise571",
-    linkLabel: "Medium Profile",
+      "I enjoy reading about systems architecture, AI, and anything else that catches my interest. I'll consider writing someday.",
   },
 ];
 
@@ -198,15 +196,16 @@ export function About() {
               Hi, I'm Praise.
             </h3>
             <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed">
-              A software engineer who cares deeply about crafting systems that
-              are both resilient and elegant. I thrive at the intersection of
-              backend architecture, real-time data, and intuitive interfaces —
-              building things that actually hold up in production.
+              I'm a software engineer who builds scalable and efficient software
+              systems. My main focus is on high-performance backends that
+              deliver quick response times and stay reliable no matter how much
+              they grow. I like keeping things practical while making sure the
+              architecture is solid.
             </p>
             <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed mt-3">
-              I've worked across the full stack — from engineering
-              high-throughput event pipelines and SDK tooling, to shipping
-              polished UIs that make complex systems feel effortless.
+              I've worked full-stack — from developing backend systems, event
+              pipelines and SDKs to shipping UIs that make complex features feel
+              simple and easy to use.
             </p>
           </div>
 
