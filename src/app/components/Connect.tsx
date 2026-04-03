@@ -6,7 +6,7 @@ import {
   Mail,
   Send,
   CheckCircle,
-  Twitter,
+  // Twitter,
 } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -72,7 +72,7 @@ const SOCIALS = [
     Icon: Linkedin,
     isMail: false,
   },
-  { label: "X", href: "https://x.com/iampraiez", Icon: Twitter, isMail: false },
+  // { label: "X", href: "https://x.com/iampraiez", Icon: Twitter, isMail: false },
   {
     label: "WhatsApp",
     href: "https://wa.me/2339166072665",
@@ -371,28 +371,20 @@ export function Connect() {
         textarea:-webkit-autofill,
         textarea:-webkit-autofill:hover,
         textarea:-webkit-autofill:focus {
-          -webkit-text-fill-color: #f1f5f9 !important; /* slate-100 for dark mode */
+          -webkit-text-fill-color: #0f172a !important; /* slate-900 — light mode default */
           -webkit-box-shadow: 0 0 0px 1000px transparent inset;
           transition: background-color 5000s ease-in-out 0s;
           background-color: transparent !important;
         }
 
+        /* Dark mode: use light text */
         .dark input:-webkit-autofill,
         .dark input:-webkit-autofill:hover,
         .dark input:-webkit-autofill:focus,
         .dark textarea:-webkit-autofill,
         .dark textarea:-webkit-autofill:hover,
         .dark textarea:-webkit-autofill:focus {
-          -webkit-text-fill-color: #f1f5f9 !important;
-        }
-
-        :not(.dark) input:-webkit-autofill,
-        :not(.dark) input:-webkit-autofill:hover,
-        :not(.dark) input:-webkit-autofill:focus,
-        :not(.dark) textarea:-webkit-autofill,
-        :not(.dark) textarea:-webkit-autofill:hover,
-        :not(.dark) textarea:-webkit-autofill:focus {
-          -webkit-text-fill-color: #0f172a !important; /* slate-900 for light mode */
+          -webkit-text-fill-color: #f1f5f9 !important; /* slate-100 */
         }
       `}</style>
     </motion.section>
